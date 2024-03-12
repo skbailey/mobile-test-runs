@@ -17,13 +17,6 @@ func main() {
 		log.Fatal(err.Error())
 	}
 
-	// appConfig := config.Config{
-	// 	ProjectARN:  "arn:aws:devicefarm:us-west-2:404667004693:project:78cdd145-8949-41a1-83d0-3043c3692ec2",
-	// 	NamePrefix:  "ScreenshotTestRun",
-	// 	AppFilePath: "App.ipa",
-	// 	TestPackage: "AppUITests-Runner.ipa",
-	// }
-
 	testrunner.Initialize()
 
 	testRunArn, err := testrunner.ScheduleRun(appConfig)
