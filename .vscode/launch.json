@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Attach",
+        "type": "go",
+        "request": "attach",
+        "mode": "remote",
+        "debugAdapter": "dlv-dap",
+        "host": "127.0.0.1",
+        "port": 2345
+      },
+      {
+        "name": "Launch",
+        "type": "go",
+        "request": "launch",
+        "mode": "debug",
+        "debugAdapter": "dlv-dap",
+        "program": "${workspaceFolder}/.",
+        "env": {
+          "AWS_ACCESS_KEY_ID": "access-key-id",
+          "AWS_SECRET_ACCESS_KEY": "secret-access-key",
+          "AWS_SESSION_TOKEN": "session-token"
+        }
+      }
+    ]
+  }
